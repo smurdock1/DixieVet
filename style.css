@@ -1,0 +1,303 @@
+body{
+	background-color:black;
+	margin:0px;
+	background-image:url("kitty.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+h1{
+	margin:0px;
+}
+h2{
+	font-size:2rem;
+}
+/*Organize Nav list*/
+ul{
+	width:50%;
+	list-style-type: none;
+	text-align:center;
+	color:white;
+}
+li{
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	width:25%;
+	transition:all 0.3s;
+}
+ul li:hover{
+	background-color: #BE202E;
+	color:white;
+	cursor:pointer;
+}
+figure{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+
+
+.fillButton{
+	width:34%;
+	font-size:4rem;
+	background-color:#555;
+
+}
+/*Flex Stuff*/
+.row{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	margin:auto;
+}
+.col{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+
+/*Buttons that navigate you.  simple border*/
+.about{
+	width:250px;
+	padding:15px;
+	background-color:transparent;
+	border:2px solid #BE202E;
+	border-radius:40px;
+	color:#BE202E;
+	font-size:1rem;
+	transition:all 0.3s;
+}
+.about:hover{
+	background-color:#BE202E;
+	color:white;
+	cursor:pointer;
+}
+.contact{
+	width:250px;
+	padding:15px;
+	background-color:transparent;
+	border:2px solid white;
+	border-radius:40px;
+	color:white;
+	font-size:1rem;
+	transition:all 0.3s;
+}
+.contact:hover{
+	background-color: #BE202E;
+	outline:none;
+	cursor:pointer;
+}
+#nav{
+	z-index:99;
+	background-color:rgba(0,0,0,1);
+	position:fixed;
+	width:100%;
+}
+.red{
+	background-color:#BE202E;
+	height:0.75vh;
+}
+
+
+/*First Container div that holds the logo and some content and a button*/
+#homeLogo{
+	margin:auto;
+	min-height:100vh;
+	background-image:url(dog.jpg);
+	
+	background-repeat:no-repeat;
+	background-size: cover;
+
+}
+/*centers the logo and such in that homeLogo Div*/
+#logo{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-180px;
+	margin-left:-165px;
+	text-align:center;
+	color:white;
+}
+
+/*We LOVE animals stuff*/
+#second{
+	background-color: rgba(255,255,255,0.8);
+	min-height:75vh;
+	margin:0px;
+
+}
+#secondContent{
+	width:50%;
+	padding:40px;
+}
+
+#blah{
+	color:#777;
+	font-size:1.2rem;
+	margin-bottom:50px;
+}
+#know{
+	font-size:6rem;
+	margin:50px 0px 50px 0px;
+	color:black;
+}
+/*Div that holds giant buttons*/
+#third{
+	min-height:75vh;
+	margin:0px;
+	background-color:black;
+}
+
+
+/*Giant Photo Buttons*/
+#pets{
+	background-image: url(lab.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:white;
+	transition:all 1s;
+
+}
+#pets:hover{
+	cursor:pointer;
+	background-image: url(darklab.png);
+}
+#horses{
+	background-image:url(horse.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:white;
+	background-position:center;
+	transition:all 1s;
+	
+}
+#horses:hover{
+	cursor:pointer;
+	background-image: url(darkhorse.png);
+}
+
+#cattle{
+	background-image: url(cow.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:white;
+	transition:all 1s;
+}
+#cattle:hover{
+	cursor:pointer;
+	background-image:url(darkcow.png);
+}
+
+#comments{
+	background-color:black;
+	min-height:10vh;
+}
+
+/*team div stuff*/
+#team{
+	background-color:white;
+	min-height:105vh;
+	/*padding:40px 150px;*/
+
+}
+#teamContent{
+	width:1050px;
+	text-align:left;
+	margin:auto;
+}
+#craigs{
+	width:1050px;
+	justify-content:space-between;
+}
+#team img{
+	height:300px;
+}
+#team h1{
+	padding:100px 0px 50px 0px;
+	font-size:6rem;
+}
+#moreButtons{
+	max-width:600px;
+	margin-top:50px;
+	padding-bottom:10px;
+
+}
+
+/*footer*/
+
+
+#contactPage{
+	padding-top: 100px;
+	background-color:white;
+	min-height:75vh;
+}
+#contactPage h1{
+	padding:30px;
+	color:#888;
+	font-size:2rem;
+}
+#contactLogo{
+	margin-left:30px;
+}
+#content{
+	background-color:#888;
+	color:white;
+	padding:20px;
+}
+#content .row{
+	justify-content: space-between;
+}
+.wrapper{
+	width:80%;
+	margin:auto;
+}
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.clear{
+	clear:both;
+}
+#aboutPage{
+	background-image:url(pup.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	min-height:90vh;
+	width:100%;
+	text-align:right;
+	color:#555;
+}
+#aboutContent{
+	width:30%;
+	margin-left:60%;
+	padding-top:150px;
+}
+
+#servicesPage{
+	min-height:90vh;
+	background-color:red;
+}
+
+#footerLogo{
+	display:block;
+	height:150px;
+	width:auto;
+	margin:auto;
+	padding:10px;
+}
+footer{
+	color:white;
+	background-color:black;
+	min-height:25vh;
+}
+
+footer p{
+	margin:0px;
+}
