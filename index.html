@@ -9,10 +9,10 @@
 		<div id = "nav">
 			<div class = "red"></div>
 			<ul class="row">
-				<li @click = "homeClick">HOME</li>
-				<li @click = "aboutClick">ABOUT</li>
-				<li @click = "servicesClick">SERVICES</li>
-				<li @click = "contactClick">CONTACT</li>
+				<li @click = "homeClick" v-bind:class="{active:(1===currentPage)}">HOME</li>
+				<li @click = "aboutClick" v-bind:class="{active:(4===currentPage)}">ABOUT</li>
+				<li @click = "servicesClick" v-bind:class="{active:(3===currentPage)}">SERVICES</li>
+				<li @click = "contactClick" v-bind:class="{active:(2===currentPage)}">CONTACT</li>
 			</ul>
 		</div>
 		<div id ="homePage" v-if="homeDiv">
@@ -34,9 +34,9 @@
 				</div>
 			</div>
 			<div id = "third" class="row">
-			<button class="fillButton" id = "pets">FAMILY PETS</button>
-			<button class="fillButton" id = "horses">EQUINE</button>
-			<button class="fillButton" id = "cattle">LIVESTOCK</button>
+			<button class="fillButton" id = "pets" @click="famPetClick">FAMILY PETS</button>
+			<button class="fillButton" id = "horses" @click="horseClick">EQUINE</button>
+			<button class="fillButton" id = "cattle" @click="cattleClick">LIVESTOCK</button>
 			</div>
 			<div id ="comments"></div>
 			<div id ="team">
@@ -74,22 +74,27 @@
 				
 
 			</div>
-			<div class="red"></div>
+			
 		</div>
 		<div v-if="contactDiv" id = "contactPage">
-			
+			<div id="grey">
 			<div class="wrapper">
-			<h1>CONTACT</h1>
+			<h1>CONTACT US</h1>
 			<br>
-				<img src = "logo.png" class="left" id="contactLogo">
-				<div class="right" id="content">
-					<div class="row"><p>Call for an Appointment!</p> <p>(435)-628-6532</p></div>
-					<div class="row"><p>Fax Us: </p> <p>(435-674-2545</p></div>
-					<div class="row"><p>Email Us: </p> <p>dixieveterinary@gmail.com</p></div>
-					<div class="row"><p>Location</p> <p>1234 Dixie Drive St. George Utah 84780</p></div>
+				<img src = "logowhite.png" class="right" id="contactLogo">
+				<div class="left" id="content">
+					
+					<div class="row"><p>Call:</p> <p>(435)-628-6532</p></div>
+					<div class="row"><p>Fax: </p> <p>(435-674-2545</p></div>
+					
+					
+					<div class="row"><p>Email: </p> <p>dixieveterinary@gmail.com</p></div>
+					<div class="row"><p>Location:</p> <div><p>1234 Dixie Drive</p><p> St. George Utah 84780</p></div></div>
+					
 
 				</div>
 				<div class="clear"></div>
+			</div>
 			</div>
 			
 
@@ -110,8 +115,23 @@
 			
 		</div>
 		<div v-if="servicesDiv" id="servicesPage">
-		</div>
+			<div id="servicesContent">
+				<h1>SERVICES</h1>
+				<div class="row" id="toggle">
+					<span @click="famPetClick" v-bind:class="{activeSpan:1===currentDiv}">Family Pets</span>
+					<span @click="horseClick" v-bind:class="{activeSpan:2===currentDiv}">Equine</span>
+					<span @click="cattleClick" v-bind:class="{activeSpan:3===currentDiv}" >Livestock</span>
+				</div>
+				<div v-if="famPetDiv" id="famPetDiv">
+				</div>
+				<div v-if="horseDiv" id="horseDiv">
+				</div>
+				<div v-if="cattleDiv" id="cattleDiv">
+				</div>
+			</div>
 
+		</div>
+		<div class="red"></div>
 		<footer>
 			<img id="footerLogo" src="logowhite.png">
 			<div class="row">

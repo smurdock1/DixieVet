@@ -17,7 +17,7 @@ ul{
 	width:50%;
 	list-style-type: none;
 	text-align:center;
-	color:white;
+	color:#555;
 }
 li{
 	padding:10px;
@@ -37,7 +37,10 @@ figure{
 	text-align:center;
 }
 
-
+.active{
+	background-color:#BE202E;
+	color:white;
+}
 
 .fillButton{
 	width:34%;
@@ -159,7 +162,7 @@ figure{
 	background-size: cover;
 	background-repeat: no-repeat;
 	color:white;
-	transition:all 1s;
+	transition:all 0.5s ease-in-out 0.1s;
 
 }
 #pets:hover{
@@ -172,7 +175,7 @@ figure{
 	background-repeat: no-repeat;
 	color:white;
 	background-position:center;
-	transition:all 1s;
+	transition:all 0.5s ease-in-out 0.1s;
 	
 }
 #horses:hover{
@@ -185,7 +188,7 @@ figure{
 	background-size: cover;
 	background-repeat: no-repeat;
 	color:white;
-	transition:all 1s;
+	transition:all 0.5s ease-in-out 0.1s;
 }
 #cattle:hover{
 	cursor:pointer;
@@ -231,29 +234,44 @@ figure{
 
 
 #contactPage{
-	padding-top: 100px;
-	background-color:white;
+	padding-top: 62px;
 	min-height:75vh;
+	background-image: url(cowhoriz.jpg);
+	background-attachment: fixed;
+	background-position: center;
 }
 #contactPage h1{
 	padding:30px;
-	color:#888;
-	font-size:2rem;
+	padding-top:70px;
+	color:#ccc;
+	font-size:3rem;
+	text-align:center;
+	
 }
 #contactLogo{
 	margin-left:30px;
+	margin-top:50px;
 }
 #content{
-	background-color:#888;
+	width:50%;	
 	color:white;
-	padding:20px;
+	
+	font-size:1.4rem;
 }
 #content .row{
 	justify-content: space-between;
+	align-items:center;
+	text-align:right;
+	padding:10px;
 }
 .wrapper{
-	width:80%;
+	width:70%;
 	margin:auto;
+
+}
+#grey{
+	background-color:rgba(50,50,50,0.9);
+	min-height:75vh;
 }
 
 .left{
@@ -282,7 +300,17 @@ figure{
 
 #servicesPage{
 	min-height:90vh;
-	background-color:red;
+	background-color:white;
+}
+#servicesContent{
+	max-width:75%;
+	margin:auto;
+	padding-top:80px;
+	color:black;
+}
+#servicesContent h1{
+	color:#555;
+	padding:70px 0px 20px 0px;
 }
 
 #footerLogo{
@@ -292,6 +320,39 @@ figure{
 	margin:auto;
 	padding:10px;
 }
+
+#toggle{
+	width:50%;
+	font-size:1.5rem;
+	color:#555;
+	padding:30px;
+}
+.activeSpan{
+	color:#BE202E;
+}
+span{
+	font-weight:bold;
+	transition:all 0.3s;
+	position:relative;
+}
+span:hover{
+	cursor:pointer;
+	color:#BE202E;
+
+}
+#famPetDiv{
+	background-color:blue;
+	height:50vh;
+}
+#horseDiv{
+	background-color:red;
+	height:50vh;
+}
+#cattleDiv{
+	background-color:orange;
+	height:50vh;
+}
+
 footer{
 	color:white;
 	background-color:black;
