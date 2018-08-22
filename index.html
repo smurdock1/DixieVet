@@ -3,12 +3,13 @@
 <head>
 	<title>Dixie Veterinary Clinic</title>
 	<link rel="stylesheet" href ="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900i" rel="stylesheet">
 </head>
 <body>
 	<div id = "app">
 		<div id = "nav">
 			<div class = "red"></div>
-			<ul class="row">
+			<ul id = "navBar" class="row">
 				<li @click = "homeClick" v-bind:class="{active:(1===currentPage)}">HOME</li>
 				<li @click = "aboutClick" v-bind:class="{active:(4===currentPage)}">ABOUT</li>
 				<li @click = "servicesClick" v-bind:class="{active:(3===currentPage)}">SERVICES</li>
@@ -45,23 +46,23 @@
 					<div class="row" id="craigs">
 						<figure>
 							<img src="face.jpg">
-							<figcaption> Craig Brinkerhoff</figcaption>
+							<figcaption> <b>Craig Brinkerhoff</b></figcaption>
 							<p>Owner</p>
 						</figure>
 						<figure>
 							<img src="face.jpg">
 
-							<figcaption> Craig Brinkerhoff</figcaption>
+							<figcaption> <b>Craig Brinkerhoff</b></figcaption>
 							<p>Owner</p>
 						</figure>
 						<figure>
 							<img src="face.jpg">
-							<figcaption> Craig Brinkerhoff</figcaption>
+							<figcaption> <b>Craig Brinkerhoff</b></figcaption>
 							<p>Owner</p>
 						</figure>
 						<figure>
 							<img src="face.jpg">
-							<figcaption> Craig Brinkerhoff</figcaption>
+							<figcaption> <b>Craig Brinkerhoff</b></figcaption>
 							<p>Owner</p>
 						</figure>
 						
@@ -100,6 +101,7 @@
 
 		</div>
 		<div v-if="aboutDiv" id = "aboutPage">
+			<div id="aboutPhoto"><img id="kitten" src="kitten1.png"></div>
 			<div id="aboutContent">
 				<h1>ABOUT</h1>
 				<br>
@@ -122,23 +124,88 @@
 					<span @click="horseClick" v-bind:class="{activeSpan:2===currentDiv}">Equine</span>
 					<span @click="cattleClick" v-bind:class="{activeSpan:3===currentDiv}" >Livestock</span>
 				</div>
-				<div v-if="famPetDiv" id="famPetDiv">
+				<div v-if="famPetDiv" id="famPetDiv" class="row">
+					<img src= "family-pet.jpg" >
+					<div class="section" > 
+						<h3>We offer the following and much more!</h3>
+						<ul class="serviceList">
+							<li>Dentals</li>
+							<li>Vaccinations</li>
+							<li>Spays/Neuters</li>
+							<li>Ear Crops</li>
+							<li>Orthopedic Repair</li>
+							<li>Radiology</li>
+							<li>Surgery</li>
+							<li>Kennels</li>
+							<li>Grooming</li>
+						</ul>
+					</div>
 				</div>
-				<div v-if="horseDiv" id="horseDiv">
+				<div v-if="horseDiv" id="horseDiv" class="row">
+					<img src= "pet-horse.jpg" >
+					<div class="section" > 
+						<h3>We offer the following and much more!</h3>
+						<ul class="serviceList">
+							<li>Teeth Float</li>
+							<li>Reproductive Care</li>
+							<li>Lameness</li>
+							<li>Vaccinations</li>
+							<li>Surgery</li>
+						</ul>
+					</div>
 				</div>
-				<div v-if="cattleDiv" id="cattleDiv">
+				<div v-if="cattleDiv" id="cattleDiv" class="row">
+					<img src= "cowhoriz.jpg" >
+					<div class="section" > 
+						<h3>We offer the following and much more!</h3>
+						<ul class="serviceList">
+							<li>Pregnant Check</li>
+							<li>Semen and Trich Testing</li>
+							<li>Vaccinations</li>
+						</ul>
+					</div>
 				</div>
+				<div class="clear"></div>
 			</div>
 
 		</div>
 		<div class="red"></div>
 		<footer>
-			<img id="footerLogo" src="logowhite.png">
-			<div class="row">
-				<p>FOLLOW US ON</p><p>CONTACT US AT</p><p>WHERE WE ARE</p>
+			<div id = "homeFooter" v-if="homeDiv">
+				<img id="footerLogo" src="logowhite.png">
+				<div class="row">
+					<p>FOLLOW US ON</p><p>CONTACT US AT</p><p>WHERE WE ARE</p>
+				</div>
+				<div class="row">
+					<p>IMG</p><p>435-628-6532</p><p>IMG</p>
+				</div>
+				<br>
+
 			</div>
-			<div class="row">
-				<p>IMG</p><p>435-628-6532</p><p>IMG</p>
+			<div id = "otherFooter" v-if="!homeDiv">
+				<div class="row">
+					<div class="col">
+						<h4>OUR PAGES</h4>
+						<p class="link" @click = "homeClick" v-bind:class="{activeFOOT:(1===currentPage)}"> > HOME</p>
+						<p class="link" @click = "aboutClick" v-bind:class="{activeFOOT:(4===currentPage)}"> > ABOUT</p>
+						<p class="link" @click = "servicesClick" v-bind:class="{activeFOOT:(3===currentPage)}"> > SERVICES</p>
+						<p class="link" @click = "contactClick" v-bind:class="{activeFOOT:(2===currentPage)}"> > CONTACT</p>
+					</div>
+					<div class="col">
+						<h4>CONTACT INFO</h4>
+						<p>Dixie Vet Clinic</p>
+						<div>
+							<p>730 North Dixie Drive</p>
+							<p>St. George, UT 84770</p>
+						</div>
+						<p> 435-628-6532</p>
+						<p>dixieveterinary@gmail.com</p>
+					</div>
+					<div class="col">
+						<h4>FOLLOW US ON</h4>
+						<p> Pic HERE?</p>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
